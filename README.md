@@ -120,22 +120,22 @@ client.animate(animation, duration)
 <br />
 
 ##Built-in plugins
-**video-png** streams the video to the browser through static image loading, works great in every browser. Requires ffmpeg installed on your system.
+- **video-png** streams the video to the browser through static image loading, works great in every browser. Requires ffmpeg installed on your system.
 
-**video-stream** use node-dronestream to stream the raw h264 video feed via webscokets and rendering in Javascript !!! Need a modern browser and CPU.
+- **video-stream** use node-dronestream to stream the raw h264 video feed via webscokets and rendering in Javascript !!! Need a modern browser and CPU.
 
-hud to visualize a head-up display with artificial horizon, compass, altimeter, etc. Based **onnodecopter-cockpit**
+- hud to visualize a head-up display with artificial horizon, compass, altimeter, etc. Based **onnodecopter-cockpit**
 pilot to control the drone remotely using the keyboard. Based on drone-browser.
 battery display a battery widget in the top bar.
 blackbox records all mission data (raw video, navdata, etc.) on the disk.
 
-**replay** replays a mission by injecting the data at the client level. Makes it a very friendly tool to code/test/debug when you can't fly. You need to use video-png for video, not compatible with video-stream yet.
+- **replay** replays a mission by injecting the data at the client level. Makes it a very friendly tool to code/test/debug when you can't fly. You need to use video-png for video, not compatible with video-stream yet.
 <br />
 <br />
 <br />
 
 ##Resources
- **AR Drone Modification (AR Drone zip tie mod)**
+**AR Drone Modification (AR Drone zip tie mod)**
 <br />
  http://www.droneflyers.com/2013/02/your-first-ar-drone-modification-should-be-landing-gear/
 
