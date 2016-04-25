@@ -1,23 +1,31 @@
+#!/usr/bin/env node
+
+// Plug Ins
+/*client.on('navdata', console.log);
+var pngStream = client.getPngStream();
+pngStream.on('data', console.log);*/
+
 // Script which will fly the drone autonomously, without needing user intervention
 // Including the library, and creating a client (drone) object
 var arDrone = require('ar-drone');
-var drone = arDrone.createClient();
+var client = arDrone.createClient();
 
 // The script then instructs the drone to take-off
-drone.ftrim();
-drone.takeoff(0);
-drone.calibrate(0);
+client.ftrim();
+client.takeoff(0);
+client.calibrate(0);
 
-drone
-.after(8000, function() {
-  this.clockwise(1);
-  this.front(0.05);
-  this.up(0.1);
+client
+.after(5000, function() {
+  this.up(0.5);
+  this.clockwise(0.2);
+  // this.front(0.02);
+  this.left(0.5);
 })
- .after(5000, function() {
+ .after(15000, function() {
   this.stop(0);
 })
- .after(5000, function(){
+ .after(8000, function(){
   this.land();
 });
 
