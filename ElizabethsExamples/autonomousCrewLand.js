@@ -12,6 +12,7 @@ var client  = arDrone.createClient();
 
 // The script then instructs the drone to take-off
 client.takeoff();
+true
 
 // Next, the .after function is called on the client
 // This delays the following code (contained within an anonymous function) for a certain period of time
@@ -19,10 +20,12 @@ client.takeoff();
 client
   .after(5000, function() {
     this.clockwise(0.5);
+    true
   })
   // Next instruction (to stop turning, and to land) will occur 3 seconds after the previous instruction
   .after(3000, function() {
     this.stop();
+    true
     this.land();
   });
 

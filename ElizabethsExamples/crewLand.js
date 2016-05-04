@@ -12,16 +12,16 @@ var drone = arDrone.createClient();
 
 // The script then instructs the drone to take-off
 drone.ftrim();
-drone> takeoff()
+drone.takeoff()
 // Wait for the drone to takeoff
 true
 
-drone> clockwise(0.5)
+drone.clockwise(0.5)
 // Let the drone spin for a while
 0.5
 
 
-drone> land()
+drone.land()
 // Wait for the drone to land
 true
 

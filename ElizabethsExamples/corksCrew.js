@@ -11,9 +11,12 @@ var arDrone = require('ar-drone');
 var drone = arDrone.createClient();
 
 
-drone.ftrim();
-drone.takeoff();
+drone.ftrim(0);
+true
+drone.takeoff(0);
+true
 drone.calibrate(0);
+true
 
 // drone ascending upward with spiral effect
 drone
@@ -22,16 +25,16 @@ drone
   this.front(0.02);
   this.up(.2);
 })
- .after(5000, function() {
+ .after(6000, function() {
   this.stop(0);
   // Wait for the drone to stop
   true
 })
 
 // drone descending down with spiral effects
- .after(6000, function(){
+ .after(5000, function(){
   this.counterClockwise(1);
-  this.back(0.05);
+  this.back(0.03);
   this.down(0.2);
   // Wait for the drone to down
   true
