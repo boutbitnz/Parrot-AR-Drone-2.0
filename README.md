@@ -115,6 +115,18 @@ client.config({ key: 'general:navdata_demo', value: 'FALSE', timeout: 1000 }, ca
 client.animate(animation, duration)
 
 - Performs a pre-programmed flight sequence for a given duration (in ms).animation can be one of the following
+
+###Drone library as it has tons of beneficial information.###
+**takeoff()** - has the drone takeoff and hover above the ground
+**land()** - has the drone land
+**up(speed)** - has the drone gain altitude at a speed between 1 (max speed) and 0 (still).
+**down(speed)** - makes the drone reduce altitude
+**clockwise(speed)** - drone spins clockwise
+**counterClockwise(speed)** - drone spins counter-clockwise
+**front(speed)/back(speed)** - changes the pitch causing horizontal movement
+**left(speed)/right(speed)** - changes the roll causing horizontal movement
+**stop()** - keeps the drone hovering in place
+(for complex functions like flips and manuevers, check out the README file linked above)
 <br />
 <br />
 <br />
@@ -147,6 +159,11 @@ http://diydrones.com/profiles/blogs/dancing-parrot-ar-drone-2-0s
 <br />
 How to Troubleshoot and Reset your AR Drone (1.0 and 2.0) after a crash
 http://www.droneflyers.com/2013/03/how-to-troubleshoot-your-ar-drone-1-0-and-2-0-after-a-crash/
+
+**REPL**
+A read–eval–print loop (REPL), also known as an interactive toplevel or language shell, is a simple,
+interactive computer programming environment that takes single user inputs (i.e. single expressions),
+evaluates them, and returns the result to the user; a program written in a REPL environment is executed piecewise.
 
 
 
